@@ -1,0 +1,36 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2005-08",
+  "messages": [
+    {
+      "id": "msg-6ce8e58041bb",
+      "message_id": "<d508cb7d0508240808496be1be@mail.gmail.com>",
+      "from_name": "sumit das",
+      "from_email_hash": "8f6561bebe1fb31f57f8b771f5db4b26a169225169628bf9e23990e338253d5c",
+      "date": "2005-08-24T15:08:54Z",
+      "subject": "[R-sig-QA] Seeking help from members",
+      "subject_clean": "Seeking help from members",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hi,\nI am Sumit , studying M.Tech in Quality Reliability and Operations\nResearch at Indian Statistical Institute , Kolkata , India.\n                  Presently I am  working on a project  named \ndeveloping Quality Assurance procedure  for R Software under the\nguidance of Prof.Mandar Mitra as a part of my academic.\nRegarding that can any one send me in brief details about the already\nexisted quality assurance procedures  for R Software as early  as\npossible. Satish(satish.isi at gmail.com)  is also my partner in this\nproject who is also one of the member of this group.\n\nRegards\nSumit Das",
+      "body_snippet": "Hi,\nI am Sumit , studying M.Tech in Quality Reliability and Operations\nResearch at Indian Statistical Institute , Kolkata , India.\n                  Presently I am  working on a project  named \ndevelo",
+      "thread_id": "thread-6ce8e58041bb",
+      "thread_depth": 0,
+      "month": "2005-08"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-6ce8e58041bb",
+      "subject": "Seeking help from members",
+      "message_count": 1,
+      "participants": [
+        "sumit das"
+      ],
+      "started": "2005-08-24T15:08:54Z",
+      "last_reply": "2005-08-24T15:08:54Z",
+      "root_message_id": "msg-6ce8e58041bb"
+    }
+  ]
+}

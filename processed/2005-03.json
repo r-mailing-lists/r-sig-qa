@@ -1,0 +1,55 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2005-03",
+  "messages": [
+    {
+      "id": "msg-72519cacf14c",
+      "message_id": "<915D2D65A9986440A277AC5C98AA466F978C3F@groamrexm02.amer.pfizer.com>",
+      "from_name": "Warnes, Gregory R",
+      "from_email_hash": "1251a1b793aba446679c34ce6ca520749dff649fb71db0c566f085c5de34c585",
+      "date": "2005-03-13T02:21:15Z",
+      "subject": "[R-sig-QA] Validation of an R installation",
+      "subject_clean": "Validation of an R installation",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I've just gotten down to this level in my inbox.  What is the status of this\neffort?  We at Pfizer are interested in helping things along.\n\n-Greg\n\n> -----Original Message-----\n> From: r-sig-qa-bounces at stat.math.ethz.ch\n> [mailto:r-sig-qa-bounces at stat.math.ethz.ch]On Behalf Of A.J. Rossini\n> Sent: Wednesday, January 12, 2005 9:52 AM\n> To: bates at stat.wisc.edu\n> Cc: r-sig-qa at r-project.org\n> Subject: Re: [R-sig-QA] Validation of an R installation\n> \n> \n> Following up on my own post, here is an internal response from Andreas\n> Krause (of Krause & Olson fame), our local reluctant expert on\n> validation.   Please don't hold it against him, I was going to\n> threaten access to the expresso machine if he didn't comment :-).\n> \n> > Tony,\n> >\n> >this list looks good. Going by my experiences so far,\n> >\n> >the validate() function in Splus is really useful\n> >and so is the white paper that Insightful released on their quality\n> >assurance policy and techniques.\n> >That's the major emphasis.\n> >\n> >Then there is typically a vendor audit (actually including a \n> visit to the\n> >vendor), and here I'm not clear what that might mean for R.\n> >I have actually suggested to Insightful that they become \n> some sort of Red\n> >Hat or SuSe for R, and they seem to have discussed it.\n> >I would put that question forward to the group. Elvis Miller (XLS\n> >solutions, isn't it?) might be interested, too.\n> >Maybe Ueli can comment on what people actually do during a \n> vendor audit\n> >visit.\n> >\n> >Finally, a validation needs to take place for every new version, and\n> >that's a pain given R's fairly frequent updates (compared to \n> S-Plus and\n> >SAS at least). Another point of discussion (POD).\n> >\n> >If we sort these points out, we should be very close to \n> making it come\n> >true.\n> \n> \n> best,\n> -tony\n> \n> \"Commit early,commit often, and commit in a repository from \n> which we can easily\n> roll-back your mistakes\" (AJR, 4Jan05).\n> \n> A.J. Rossini\n> blindglobe at gmail.com\n> \n> _______________________________________________\n> R-sig-QA at stat.math.ethz.ch mailing list\n> https://stat.ethz.ch/mailman/listinfo/r-sig-qa\n> \n\n\nLEGAL NOTICE\\ Unless expressly stated otherwise, this messag...{{dropped}}",
+      "body_snippet": "I've just gotten down to this level in my inbox.  What is the status of this\neffort?  We at Pfizer are interested in helping things along.\n\n-Greg\n\n> -----Original Message-----\n> From: r-sig-qa-bounces",
+      "thread_id": "thread-72519cacf14c",
+      "thread_depth": 0,
+      "month": "2005-03"
+    },
+    {
+      "id": "msg-6565705c2656",
+      "message_id": "<1abe3fa905031301382e33f78f@mail.gmail.com>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "035aa365217fa4ca7185e15d86df9cfadfe895a8833f74f31844a380f3e3aaa4",
+      "date": "2005-03-13T09:38:41Z",
+      "subject": "[R-sig-QA] Validation of an R installation",
+      "subject_clean": "Validation of an R installation",
+      "in_reply_to": "<915D2D65A9986440A277AC5C98AA466F978C3F@groamrexm02.amer.pfizer.com>",
+      "references": [
+        "<915D2D65A9986440A277AC5C98AA466F978C3F@groamrexm02.amer.pfizer.com>"
+      ],
+      "body_plain": "We had an interesting discussion.  I've updated my white paper on it,\nbut havn't send it out yet (to Frank H., you, and some internal\nfolks).\n\nMost of the delays are from having to pointed address issues related to:\n\n1. R isn't as special/focused as WinBUGS\n2. R has a commercial alternative.\n\nBoth short-circuit some of the \"exception rules\" that we have.\n\nOne move that has helped is the BUGS folks movement towards R with\nOpenBUGS and rbugs, as well as the potential release of Xpose for R\n(NONMEM post-processor), though the latter won't happen anytime soon.\n\nThe other critical need is for R-core to publish a whitepaper\ndescribing/justifying development practices, goals, and testing/QA/QC\nstrategies.  It's not that the components aren't there for IQ/OQ/PQ,\nbut they need to be made explicit.  Martin and Doug were discussing\nsome issues related to it, but for various critical reasons, I don't\nthink it'll be done any time soon.\n\nbest,\n-tony\n\n\nOn Sat, 12 Mar 2005 21:21:15 -0500, Warnes, Gregory R\n<gregory.r.warnes at pfizer.com> wrote:\n> I've just gotten down to this level in my inbox.  What is the status of this\n> effort?  We at Pfizer are interested in helping things along.\n> \n> -Greg\n> \n> > -----Original Message-----\n> > From: r-sig-qa-bounces at stat.math.ethz.ch\n> > [mailto:r-sig-qa-bounces at stat.math.ethz.ch]On Behalf Of A.J. Rossini\n> > Sent: Wednesday, January 12, 2005 9:52 AM\n> > To: bates at stat.wisc.edu\n> > Cc: r-sig-qa at r-project.org\n> > Subject: Re: [R-sig-QA] Validation of an R installation\n> >\n> >\n> > Following up on my own post, here is an internal response from Andreas\n> > Krause (of Krause & Olson fame), our local reluctant expert on\n> > validation.   Please don't hold it against him, I was going to\n> > threaten access to the expresso machine if he didn't comment :-).\n> >\n> > > Tony,\n> > >\n> > >this list looks good. Going by my experiences so far,\n> > >\n> > >the validate() function in Splus is really useful\n> > >and so is the white paper that Insightful released on their quality\n> > >assurance policy and techniques.\n> > >That's the major emphasis.\n> > >\n> > >Then there is typically a vendor audit (actually including a\n> > visit to the\n> > >vendor), and here I'm not clear what that might mean for R.\n> > >I have actually suggested to Insightful that they become\n> > some sort of Red\n> > >Hat or SuSe for R, and they seem to have discussed it.\n> > >I would put that question forward to the group. Elvis Miller (XLS\n> > >solutions, isn't it?) might be interested, too.\n> > >Maybe Ueli can comment on what people actually do during a\n> > vendor audit\n> > >visit.\n> > >\n> > >Finally, a validation needs to take place for every new version, and\n> > >that's a pain given R's fairly frequent updates (compared to\n> > S-Plus and\n> > >SAS at least). Another point of discussion (POD).\n> > >\n> > >If we sort these points out, we should be very close to\n> > making it come\n> > >true.\n> >\n> >\n> > best,\n> > -tony\n> >\n> > \"Commit early,commit often, and commit in a repository from\n> > which we can easily\n> > roll-back your mistakes\" (AJR, 4Jan05).\n> >\n> > A.J. Rossini\n> > blindglobe at gmail.com\n> >\n> > _______________________________________________\n> > R-sig-QA at stat.math.ethz.ch mailing list\n> > https://stat.ethz.ch/mailman/listinfo/r-sig-qa\n> >\n> \n> LEGAL NOTICE\n> Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.\n> \n> \n\n\n-- \nbest,\n-tony\n\n\"Commit early,commit often, and commit in a repository from which we can easily\nroll-back your mistakes\" (AJR, 4Jan05).\n\nA.J. Rossini\nblindglobe at gmail.com",
+      "body_snippet": "We had an interesting discussion.  I've updated my white paper on it,\nbut havn't send it out yet (to Frank H., you, and some internal\nfolks).\n\nMost of the delays are from having to pointed address iss",
+      "thread_id": "thread-72519cacf14c",
+      "thread_depth": 1,
+      "month": "2005-03"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-72519cacf14c",
+      "subject": "Validation of an R installation",
+      "message_count": 2,
+      "participants": [
+        "A.J. Rossini",
+        "Warnes, Gregory R"
+      ],
+      "started": "2005-03-13T02:21:15Z",
+      "last_reply": "2005-03-13T09:38:41Z",
+      "root_message_id": "msg-72519cacf14c"
+    }
+  ]
+}

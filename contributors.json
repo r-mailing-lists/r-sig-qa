@@ -1,0 +1,138 @@
+[
+  {
+    "name": "A.J. Rossini",
+    "slug": "a-j-rossini",
+    "emailHash": "035aa365217fa4ca7185e15d86df9cfadfe895a8833f74f31844a380f3e3aaa4",
+    "messageCount": 3,
+    "firstDate": "2005-01-12T14:34:15Z",
+    "lastDate": "2005-03-13T09:38:41Z",
+    "yearlyActivity": {
+      "2005": 3
+    }
+  },
+  {
+    "name": "Martin Maechler",
+    "slug": "martin-maechler",
+    "emailHash": "08b80bef15e2ed5825d254f60485cdcaa758ceab7e5763da8b9597d47c08eaa5",
+    "messageCount": 3,
+    "firstDate": "2001-10-30T15:12:01Z",
+    "lastDate": "2008-12-01T07:48:36Z",
+    "yearlyActivity": {
+      "2001": 1,
+      "2003": 1,
+      "2008": 1
+    }
+  },
+  {
+    "name": "Kurt Hornik",
+    "slug": "kurt-hornik",
+    "emailHash": "2a5a7d280c83fdcfc4cc996735c6775e73ecd079b98b2563c07471e894f29a84",
+    "messageCount": 3,
+    "firstDate": "2001-10-31T07:08:04Z",
+    "lastDate": "2003-05-15T17:35:02Z",
+    "yearlyActivity": {
+      "2001": 1,
+      "2003": 2
+    }
+  },
+  {
+    "name": "Douglas Bates",
+    "slug": "douglas-bates",
+    "emailHash": "1a30075d27ecd90340603420268d775fa49e68c36396981566aebb828143ef21",
+    "messageCount": 2,
+    "firstDate": "2005-01-12T14:10:17Z",
+    "lastDate": "2008-11-28T18:40:26Z",
+    "yearlyActivity": {
+      "2005": 1,
+      "2008": 1
+    }
+  },
+  {
+    "name": "Mary A. Marion",
+    "slug": "mary-a-marion",
+    "emailHash": "6d72ac9c1b7b2ae39f9d75a017288a21df2a91b4529d591da823734d497a7a74",
+    "messageCount": 2,
+    "firstDate": "2008-11-28T17:33:38Z",
+    "lastDate": "2008-11-28T18:06:22Z",
+    "yearlyActivity": {
+      "2008": 2
+    }
+  },
+  {
+    "name": "Markus Loecher",
+    "slug": "markus-loecher",
+    "emailHash": "0b17eb160c0b94bce697368471778d32727707ea8069821c6297a9859d2055ca",
+    "messageCount": 1,
+    "firstDate": "2007-04-24T15:12:43Z",
+    "lastDate": "2007-04-24T15:12:43Z",
+    "yearlyActivity": {
+      "2007": 1
+    }
+  },
+  {
+    "name": "Warnes, Gregory R",
+    "slug": "warnes-gregory-r",
+    "emailHash": "1251a1b793aba446679c34ce6ca520749dff649fb71db0c566f085c5de34c585",
+    "messageCount": 1,
+    "firstDate": "2005-03-13T02:21:15Z",
+    "lastDate": "2005-03-13T02:21:15Z",
+    "yearlyActivity": {
+      "2005": 1
+    }
+  },
+  {
+    "name": "Ulrike",
+    "slug": "ulrike",
+    "emailHash": "6fa15e692d40c05c972eb0f73e2c98a09dc381c1c68356e5f675099b2a3f71b5",
+    "messageCount": 1,
+    "firstDate": "2012-10-18T14:07:16Z",
+    "lastDate": "2012-10-18T14:07:16Z",
+    "yearlyActivity": {
+      "2012": 1
+    }
+  },
+  {
+    "name": "sumit das",
+    "slug": "sumit-das",
+    "emailHash": "8f6561bebe1fb31f57f8b771f5db4b26a169225169628bf9e23990e338253d5c",
+    "messageCount": 1,
+    "firstDate": "2005-08-24T15:08:54Z",
+    "lastDate": "2005-08-24T15:08:54Z",
+    "yearlyActivity": {
+      "2005": 1
+    }
+  },
+  {
+    "name": "Charles Determan Jr",
+    "slug": "charles-determan-jr",
+    "emailHash": "bb70b26b1bff11738051eff1944db8e2c688e4d139ca3fa870eab21732fedfc3",
+    "messageCount": 1,
+    "firstDate": "2012-02-23T17:41:17Z",
+    "lastDate": "2012-02-23T17:41:17Z",
+    "yearlyActivity": {
+      "2012": 1
+    }
+  },
+  {
+    "name": "Jim_Garrett at bd.com",
+    "slug": "jim-garrett-at-bd-com",
+    "emailHash": "bdc12ae94b91453202e581fe0d3d15d624c0f2085ea4ea3edf400db01e92418d",
+    "messageCount": 1,
+    "firstDate": "2003-05-14T16:37:39Z",
+    "lastDate": "2003-05-14T16:37:39Z",
+    "yearlyActivity": {
+      "2003": 1
+    }
+  },
+  {
+    "name": "Joel J. Adamson",
+    "slug": "joel-j-adamson",
+    "emailHash": "e6af39ad135644daaf8113061673998da25ac6c4f223c7cbfe9ce3dca4cf3004",
+    "messageCount": 1,
+    "firstDate": "2006-10-04T13:50:53Z",
+    "lastDate": "2006-10-04T13:50:53Z",
+    "yearlyActivity": {
+      "2006": 1
+    }
+  }
+]

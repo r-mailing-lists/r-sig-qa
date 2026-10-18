@@ -1,0 +1,74 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2005-01",
+  "messages": [
+    {
+      "id": "msg-bfe4c4e1dbbc",
+      "message_id": "<41E52FC9.5040406@wisc.edu>",
+      "from_name": "Douglas Bates",
+      "from_email_hash": "cca1f29b44b457354587ddf38df77a5ae1a27fbc5422e0ae925ddaae41f41041",
+      "date": "2005-01-12T14:10:17Z",
+      "subject": "[R-sig-QA] Validation of an R installation",
+      "subject_clean": "Validation of an R installation",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "I am visiting Martin Maechler at ETH in Zurich, Switzerland for a month. \n  During this time I will also visit Tony Rossini and others at Novartis \nin Basel for a day.  One of the topics that I will discuss with Tony and \nhave discussed extensively with Martin is ways in which we can help \nthose useRs who face questions of whether R is \"validated\".  There was \nsome discussion on R-Help about this recently and there has also been \ndiscussion in the past both on- and off-list.\n\nThose who have compiled R from the sources may realize that \"make check\" \nand \"make check-all\" apply an extensive and ever-growing series of test \ncases to a version of R.  The same is true of R CMD check for packages.\n\nIn general a binary version of R or binary versions of packages do not \ninclude the tests directory.  There is no need - the tests are run at \nthe time that the binary version is created.  However, it would be \nreasonable for a useR to have a mechanism to perform such tests on \nhis/her installed version of R when desired, even if the version is from \na binary installation.  One way we felt this could be achieved is to \ncreate a 'validate' package that contains the files used for the tests. \n  A useR can install the package then run the tests.  I believe that \nthis would do substantially more validation of R that what is done for \ncommercial statistical packages.\n\nI have also proposed to Martin that we produce a document that describes \nthe software development process for R, including the QA tools that are \napplied throughout the development process.\n\nOthers, especially Henric Nilsson, Frank Harrell Jr., Tony Rossini, and \nJim Garrett, have proposed producing a document similar to the \"white \npapers\" produced by commercial companies specifically addressing the FDA \nguidelines in Title 21, Code of Federal Regulations, Part 11.  We hope \nthat such efforts could be facilitated by what we propose.\n\nMartin has proposed in private mail to Henric that we use the R-SIG-QA \nemail list to communicate about this effort.  I think it would be an \nexcellent use of this list and I hope others agree.\n\nI include a list of topics that we felt might be discussed in a document \nabout the development process for R core.  Suggestions and comments on \nthis list and on the general idea of a validate package are welcome.\n\n\t\t   Quality assurance methods for R\n\n\t\t\t     R Core Team\n\nComposition of R-Core Team\n\nAccess to the source code repository\n\nVersions of R available - R-release, R-patched, R-devel\n\nRoutine tests applied during the development process\n\nRelease process\n    Tests performed during release\n\nBuilding R from source code\n\n  configuration process (autoconf)\n  range of tests covered by 'make check'\n  range of tests covered by 'make check-all'\n\nBinary installations\n\n  Windows\n\n    Configuration\n    Checks performed on binary builds\n\n  OS X for the Macintosh\n\n    Configuration\n    Checks performed on binary builds\n\nChecking of packages on CRAN\n\n  Daily package checking\n\nSpecial capabilities\n\n  Memory leak detection through valgrind\n\n\"War stories\"\n\n  Bugs found in other software (e.g. Lapack)",
+      "body_snippet": "I am visiting Martin Maechler at ETH in Zurich, Switzerland for a month. \n  During this time I will also visit Tony Rossini and others at Novartis \nin Basel for a day.  One of the topics that I will d",
+      "thread_id": "thread-bfe4c4e1dbbc",
+      "thread_depth": 0,
+      "month": "2005-01"
+    },
+    {
+      "id": "msg-46cd2d88c893",
+      "message_id": "<1abe3fa9050112063419d1bd6e@mail.gmail.com>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "035aa365217fa4ca7185e15d86df9cfadfe895a8833f74f31844a380f3e3aaa4",
+      "date": "2005-01-12T14:34:15Z",
+      "subject": "[R-sig-QA] Validation of an R installation",
+      "subject_clean": "Validation of an R installation",
+      "in_reply_to": "<41E52FC9.5040406@wisc.edu>",
+      "references": [
+        "<41E52FC9.5040406@wisc.edu>"
+      ],
+      "body_plain": "On Wed, 12 Jan 2005 08:10:17 -0600, Douglas Bates <bates at wisc.edu> wrote:\n> I am visiting Martin Maechler at ETH in Zurich, Switzerland for a month.\n>  During this time I will also visit Tony Rossini and others at Novartis\n> in Basel for a day.  One of the topics that I will discuss with Tony and\n> have discussed extensively with Martin is ways in which we can help\n> those useRs who face questions of whether R is \"validated\".  There was\n> some discussion on R-Help about this recently and there has also been\n> discussion in the past both on- and off-list.\n> \n> Those who have compiled R from the sources may realize that \"make check\"\n> and \"make check-all\" apply an extensive and ever-growing series of test\n> cases to a version of R.  The same is true of R CMD check for packages.\n> \n> In general a binary version of R or binary versions of packages do not\n> include the tests directory.  There is no need - the tests are run at\n> the time that the binary version is created.  However, it would be\n> reasonable for a useR to have a mechanism to perform such tests on\n> his/her installed version of R when desired, even if the version is from\n> a binary installation.  One way we felt this could be achieved is to\n> create a 'validate' package that contains the files used for the tests.\n>  A useR can install the package then run the tests.  I believe that\n> this would do substantially more validation of R that what is done for\n> commercial statistical packages.\n\nOne qualification that needs to be done is an \"installation\nqualification\".  I.e. there ought to be a means by which I can run a\nfunction after the installation,\n    \n   DoesMyInstallationFollowRCOREguidelines()\n\nwhich might check for permissions, library versioning/mismatches,  etc.\n\nEven better, this would run similar functions on 3rd party packages\nwhich might provide, in addition to correctness of the current\ninstallation (by that I'm more concerned with libraries as well as\nrerunning parts of  R CMD check, if such a thing were possible on\ninstalled packages as well as giving  numerical confirmation that the\nresults are within numerical tolerance of error).\n\n> I include a list of topics that we felt might be discussed in a document\n> about the development process for R core.  Suggestions and comments on\n> this list and on the general idea of a validate package are welcome.\n> \n>                   Quality assurance methods for R\n> \n>                             R Core Team\n> \n> Composition of R-Core Team\n> \n> Access to the source code repository\n> \n> Versions of R available - R-release, R-patched, R-devel\n> \n> Routine tests applied during the development process\n> \n> Release process\n>    Tests performed during release\n> \n> Building R from source code\n> \n>  configuration process (autoconf)\n>  range of tests covered by 'make check'\n>  range of tests covered by 'make check-all'\n> \n> Binary installations\n> \n>  Windows\n> \n>    Configuration\n>    Checks performed on binary builds\n> \n>  OS X for the Macintosh\n> \n>    Configuration\n>    Checks performed on binary builds\n> \n> Checking of packages on CRAN\n> \n>  Daily package checking\n> \n> Special capabilities\n> \n>  Memory leak detection through valgrind\n> \n> \"War stories\"\n> \n>  Bugs found in other software (e.g. Lapack)\n\nCan we comment on the role of the R Foundation in supporting\ncontinuing development of R?  Strong evidence (of course, not\nguaranteed!) of continuing development is one issue in quality\nassurance.\n\nThanks for raising this a bit, Doug.  I've got a half written paper on\nissues for the use of academic and open source (there is a\ndistinction!) in a regulated production environment, that I'll need to\nput out.\n\nAlso, the origin of a quality assurance and FDA-compliance white\npaper/statement would have to come from the \"vendor\", i.e. R-Core, for\ncompanies to feel comfortable with it.\n\n-- \nbest,\n-tony\n\n\"Commit early,commit often, and commit in a repository from which we can easily\nroll-back your mistakes\" (AJR, 4Jan05).\n\nA.J. Rossini\nblindglobe at gmail.com",
+      "body_snippet": "On Wed, 12 Jan 2005 08:10:17 -0600, Douglas Bates <bates at wisc.edu> wrote:\n> I am visiting Martin Maechler at ETH in Zurich, Switzerland for a month.\n>  During this time I will also visit Tony Rossi",
+      "thread_id": "thread-bfe4c4e1dbbc",
+      "thread_depth": 1,
+      "month": "2005-01"
+    },
+    {
+      "id": "msg-ece264ce473e",
+      "message_id": "<1abe3fa90501120651655a22@mail.gmail.com>",
+      "from_name": "A.J. Rossini",
+      "from_email_hash": "035aa365217fa4ca7185e15d86df9cfadfe895a8833f74f31844a380f3e3aaa4",
+      "date": "2005-01-12T14:51:30Z",
+      "subject": "[R-sig-QA] Validation of an R installation",
+      "subject_clean": "Validation of an R installation",
+      "in_reply_to": "<1abe3fa9050112063419d1bd6e@mail.gmail.com>",
+      "references": [
+        "<41E52FC9.5040406@wisc.edu>",
+        "<1abe3fa9050112063419d1bd6e@mail.gmail.com>"
+      ],
+      "body_plain": "Following up on my own post, here is an internal response from Andreas\nKrause (of Krause & Olson fame), our local reluctant expert on\nvalidation.   Please don't hold it against him, I was going to\nthreaten access to the expresso machine if he didn't comment :-).\n\n> Tony,\n>\n>this list looks good. Going by my experiences so far,\n>\n>the validate() function in Splus is really useful\n>and so is the white paper that Insightful released on their quality\n>assurance policy and techniques.\n>That's the major emphasis.\n>\n>Then there is typically a vendor audit (actually including a visit to the\n>vendor), and here I'm not clear what that might mean for R.\n>I have actually suggested to Insightful that they become some sort of Red\n>Hat or SuSe for R, and they seem to have discussed it.\n>I would put that question forward to the group. Elvis Miller (XLS\n>solutions, isn't it?) might be interested, too.\n>Maybe Ueli can comment on what people actually do during a vendor audit\n>visit.\n>\n>Finally, a validation needs to take place for every new version, and\n>that's a pain given R's fairly frequent updates (compared to S-Plus and\n>SAS at least). Another point of discussion (POD).\n>\n>If we sort these points out, we should be very close to making it come\n>true.\n\n\nbest,\n-tony\n\n\"Commit early,commit often, and commit in a repository from which we can easily\nroll-back your mistakes\" (AJR, 4Jan05).\n\nA.J. Rossini\nblindglobe at gmail.com",
+      "body_snippet": "Following up on my own post, here is an internal response from Andreas\nKrause (of Krause & Olson fame), our local reluctant expert on\nvalidation.   Please don't hold it against him, I was going to\nthr",
+      "thread_id": "thread-bfe4c4e1dbbc",
+      "thread_depth": 2,
+      "month": "2005-01"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-bfe4c4e1dbbc",
+      "subject": "Validation of an R installation",
+      "message_count": 3,
+      "participants": [
+        "A.J. Rossini",
+        "Douglas Bates"
+      ],
+      "started": "2005-01-12T14:10:17Z",
+      "last_reply": "2005-01-12T14:51:30Z",
+      "root_message_id": "msg-bfe4c4e1dbbc"
+    }
+  ]
+}

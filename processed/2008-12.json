@@ -1,0 +1,38 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2008-12",
+  "messages": [
+    {
+      "id": "msg-32795c6c0f22",
+      "message_id": "<18739.38612.743708.32403@stat.math.ethz.ch>",
+      "from_name": "Martin Maechler",
+      "from_email_hash": "c2c86f22f78a4ecfe6d0e6b4e2be505a3f5beb0470ea88c903688ac536018a98",
+      "date": "2008-12-01T07:48:36Z",
+      "subject": "[R-sig-QA] [Fwd: create groups based upon different levels of 4 factors] update 1",
+      "subject_clean": "[Fwd: create groups based upon different levels of 4 factors] update 1",
+      "in_reply_to": "<4930331E.5020301@comcast.net>",
+      "references": [
+        "<4930331E.5020301@comcast.net>"
+      ],
+      "body_plain": "Hello Mary,\n\nyou snt this to  R-SIG-QA,  an almost-defunct mailing list,\n\n\"R Special Interest Group on Quality Assurance -OF R ITSELF-\"\n\n\nYou really should repost this to R-help, \nif you are still interested in an answer.\n\nBest regards,\nMartin Maechler\n\n>>>>> \"MAM\" == Mary A Marion <mmstat at comcast.net>\n>>>>>     on Fri, 28 Nov 2008 13:06:22 -0500 writes:\n\n    MAM> Hello to the R gurus, My data is bound in a dataframe.\n    MAM> data2<-cbind.data.frame(digrp,gender, agegrp,\n    MAM> bmigrp,wt) data2[1:5,]\n\n    MAM> I want to create groups based upon different levels of\n    MAM> 4 factors ind<- as.logical ( (digrp=1) & (gender=1) &\n    MAM> (agegrp=\"[20-35)\") & (bmigrp=\"[0,18.5)\" ) );\n\n    MAM> Error in (digrp = 1) & (gender = 1) & (agegrp =\n    MAM> \"[20-35)\") : operations are possible only for numeric\n    MAM> or logical types\n    >> \n    MAM> I keep getting an error message.  How do I see that the\n    MAM> above statement is in correct type format?  #operations\n    MAM> are possible only for numeric or logical types.  why\n    MAM> does it not include bmigrp?\n\n    MAM> Data was created as follows:\n\n    MAM> #BMI CLASSIFICATION breaks<-c(0,18.5,25,30,200)\n    MAM> bmigrp<-cut(bmi,breaks=breaks,right=FALSE)\n\n    MAM> #AGE GROUPS breaks<-c(1,35,60,90)\n    MAM> agegrp<-cut(age,breaks=breaks,right=FALSE)\n\n    MAM> #DI GROUPS #1=yes has diabetes, 2=no does not have\n    MAM> digrp<-as.factor(join5[,\"DIQ010\"])\n\n    MAM> #GENDER GROUPS #1=male, 2=female\n    MAM> gender<-as.factor(join5[,\"RIAGENDR\"])\n\n    MAM> #FORM DATA FRAME TO ANALYZE\n    MAM> data2<-cbind.data.frame(digrp,gender, agegrp,\n    MAM> bmigrp,wt) data2[1:5,]\n\n    MAM> Thanks.\n\n    MAM> Sincerely, Mary A. Marion\n\n    MAM> _______________________________________________\n    MAM> R-sig-QA at stat.math.ethz.ch mailing list\n    MAM> https://stat.ethz.ch/mailman/listinfo/r-sig-qa",
+      "body_snippet": "Hello Mary,\n\nyou snt this to  R-SIG-QA,  an almost-defunct mailing list,\n\n\"R Special Interest Group on Quality Assurance -OF R ITSELF-\"\n\n\nYou really should repost this to R-help, \nif you are still int",
+      "thread_id": "thread-32795c6c0f22",
+      "thread_depth": 0,
+      "month": "2008-12"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-32795c6c0f22",
+      "subject": "[Fwd: create groups based upon different levels of 4 factors] update 1",
+      "message_count": 1,
+      "participants": [
+        "Martin Maechler"
+      ],
+      "started": "2008-12-01T07:48:36Z",
+      "last_reply": "2008-12-01T07:48:36Z",
+      "root_message_id": "msg-32795c6c0f22"
+    }
+  ]
+}

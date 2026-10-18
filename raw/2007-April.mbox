@@ -1,0 +1,30 @@
+From loecher at eden.rutgers.edu  Tue Apr 24 17:12:43 2007
+From: loecher at eden.rutgers.edu (Markus Loecher)
+Date: Tue, 24 Apr 2007 11:12:43 -0400
+Subject: [R-sig-QA] testing for stationarity of distributions
+Message-ID: <20070424151157.2423C324041@annwn13.rutgers.edu>
+
+Dear fellow R users,
+I am struggling with the task of quantifying the "statistical 
+significance" of changes in a discrete distribution over time. I am 
+not even sure whether this is a well-posed problem to begin with. If 
+I was to measure e.g. the age distribution of people entering a 
+building on a daily basis, I would naturally observe fluctuations in 
+that distribution. Clearly, small variations would be interpreted as 
+"sampling noise" whereas major shifts would indicate sth. more 
+substantial. How would I quantify this ?
+Would a ChiSquare test be an appropriate test for testing overall 
+stationarity ? Or a two-way ANOVA decomposition ? Or should I look at 
+the variance of a multinomial distribution instead ?
+Also, what if wanted to test specific days for significant deviation 
+from my Null model instead of overall ?
+I am familiar with univariate time series change point detection 
+algorithms but am not clear on how to translate these tools to the 
+constrained/multivariate distribution setting.
+
+Thanking you!
+
+Markus
+
+
+

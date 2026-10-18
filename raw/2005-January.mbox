@@ -1,0 +1,267 @@
+From bates at wisc.edu  Wed Jan 12 15:10:17 2005
+From: bates at wisc.edu (Douglas Bates)
+Date: Wed, 12 Jan 2005 08:10:17 -0600
+Subject: [R-sig-QA] Validation of an R installation
+Message-ID: <41E52FC9.5040406@wisc.edu>
+
+I am visiting Martin Maechler at ETH in Zurich, Switzerland for a month. 
+  During this time I will also visit Tony Rossini and others at Novartis 
+in Basel for a day.  One of the topics that I will discuss with Tony and 
+have discussed extensively with Martin is ways in which we can help 
+those useRs who face questions of whether R is "validated".  There was 
+some discussion on R-Help about this recently and there has also been 
+discussion in the past both on- and off-list.
+
+Those who have compiled R from the sources may realize that "make check" 
+and "make check-all" apply an extensive and ever-growing series of test 
+cases to a version of R.  The same is true of R CMD check for packages.
+
+In general a binary version of R or binary versions of packages do not 
+include the tests directory.  There is no need - the tests are run at 
+the time that the binary version is created.  However, it would be 
+reasonable for a useR to have a mechanism to perform such tests on 
+his/her installed version of R when desired, even if the version is from 
+a binary installation.  One way we felt this could be achieved is to 
+create a 'validate' package that contains the files used for the tests. 
+  A useR can install the package then run the tests.  I believe that 
+this would do substantially more validation of R that what is done for 
+commercial statistical packages.
+
+I have also proposed to Martin that we produce a document that describes 
+the software development process for R, including the QA tools that are 
+applied throughout the development process.
+
+Others, especially Henric Nilsson, Frank Harrell Jr., Tony Rossini, and 
+Jim Garrett, have proposed producing a document similar to the "white 
+papers" produced by commercial companies specifically addressing the FDA 
+guidelines in Title 21, Code of Federal Regulations, Part 11.  We hope 
+that such efforts could be facilitated by what we propose.
+
+Martin has proposed in private mail to Henric that we use the R-SIG-QA 
+email list to communicate about this effort.  I think it would be an 
+excellent use of this list and I hope others agree.
+
+I include a list of topics that we felt might be discussed in a document 
+about the development process for R core.  Suggestions and comments on 
+this list and on the general idea of a validate package are welcome.
+
+		   Quality assurance methods for R
+
+			     R Core Team
+
+Composition of R-Core Team
+
+Access to the source code repository
+
+Versions of R available - R-release, R-patched, R-devel
+
+Routine tests applied during the development process
+
+Release process
+    Tests performed during release
+
+Building R from source code
+
+  configuration process (autoconf)
+  range of tests covered by 'make check'
+  range of tests covered by 'make check-all'
+
+Binary installations
+
+  Windows
+
+    Configuration
+    Checks performed on binary builds
+
+  OS X for the Macintosh
+
+    Configuration
+    Checks performed on binary builds
+
+Checking of packages on CRAN
+
+  Daily package checking
+
+Special capabilities
+
+  Memory leak detection through valgrind
+
+"War stories"
+
+  Bugs found in other software (e.g. Lapack)
+
+
+
+From blindglobe at gmail.com  Wed Jan 12 15:34:15 2005
+From: blindglobe at gmail.com (A.J. Rossini)
+Date: Wed, 12 Jan 2005 15:34:15 +0100
+Subject: [R-sig-QA] Validation of an R installation
+In-Reply-To: <41E52FC9.5040406@wisc.edu>
+References: <41E52FC9.5040406@wisc.edu>
+Message-ID: <1abe3fa9050112063419d1bd6e@mail.gmail.com>
+
+On Wed, 12 Jan 2005 08:10:17 -0600, Douglas Bates <bates at wisc.edu> wrote:
+> I am visiting Martin Maechler at ETH in Zurich, Switzerland for a month.
+>  During this time I will also visit Tony Rossini and others at Novartis
+> in Basel for a day.  One of the topics that I will discuss with Tony and
+> have discussed extensively with Martin is ways in which we can help
+> those useRs who face questions of whether R is "validated".  There was
+> some discussion on R-Help about this recently and there has also been
+> discussion in the past both on- and off-list.
+> 
+> Those who have compiled R from the sources may realize that "make check"
+> and "make check-all" apply an extensive and ever-growing series of test
+> cases to a version of R.  The same is true of R CMD check for packages.
+> 
+> In general a binary version of R or binary versions of packages do not
+> include the tests directory.  There is no need - the tests are run at
+> the time that the binary version is created.  However, it would be
+> reasonable for a useR to have a mechanism to perform such tests on
+> his/her installed version of R when desired, even if the version is from
+> a binary installation.  One way we felt this could be achieved is to
+> create a 'validate' package that contains the files used for the tests.
+>  A useR can install the package then run the tests.  I believe that
+> this would do substantially more validation of R that what is done for
+> commercial statistical packages.
+
+One qualification that needs to be done is an "installation
+qualification".  I.e. there ought to be a means by which I can run a
+function after the installation,
+    
+   DoesMyInstallationFollowRCOREguidelines()
+
+which might check for permissions, library versioning/mismatches,  etc.
+
+Even better, this would run similar functions on 3rd party packages
+which might provide, in addition to correctness of the current
+installation (by that I'm more concerned with libraries as well as
+rerunning parts of  R CMD check, if such a thing were possible on
+installed packages as well as giving  numerical confirmation that the
+results are within numerical tolerance of error).
+
+> I include a list of topics that we felt might be discussed in a document
+> about the development process for R core.  Suggestions and comments on
+> this list and on the general idea of a validate package are welcome.
+> 
+>                   Quality assurance methods for R
+> 
+>                             R Core Team
+> 
+> Composition of R-Core Team
+> 
+> Access to the source code repository
+> 
+> Versions of R available - R-release, R-patched, R-devel
+> 
+> Routine tests applied during the development process
+> 
+> Release process
+>    Tests performed during release
+> 
+> Building R from source code
+> 
+>  configuration process (autoconf)
+>  range of tests covered by 'make check'
+>  range of tests covered by 'make check-all'
+> 
+> Binary installations
+> 
+>  Windows
+> 
+>    Configuration
+>    Checks performed on binary builds
+> 
+>  OS X for the Macintosh
+> 
+>    Configuration
+>    Checks performed on binary builds
+> 
+> Checking of packages on CRAN
+> 
+>  Daily package checking
+> 
+> Special capabilities
+> 
+>  Memory leak detection through valgrind
+> 
+> "War stories"
+> 
+>  Bugs found in other software (e.g. Lapack)
+
+Can we comment on the role of the R Foundation in supporting
+continuing development of R?  Strong evidence (of course, not
+guaranteed!) of continuing development is one issue in quality
+assurance.
+
+Thanks for raising this a bit, Doug.  I've got a half written paper on
+issues for the use of academic and open source (there is a
+distinction!) in a regulated production environment, that I'll need to
+put out.
+
+Also, the origin of a quality assurance and FDA-compliance white
+paper/statement would have to come from the "vendor", i.e. R-Core, for
+companies to feel comfortable with it.
+
+-- 
+best,
+-tony
+
+"Commit early,commit often, and commit in a repository from which we can easily
+roll-back your mistakes" (AJR, 4Jan05).
+
+A.J. Rossini
+blindglobe at gmail.com
+
+
+
+From blindglobe at gmail.com  Wed Jan 12 15:51:30 2005
+From: blindglobe at gmail.com (A.J. Rossini)
+Date: Wed, 12 Jan 2005 15:51:30 +0100
+Subject: [R-sig-QA] Validation of an R installation
+In-Reply-To: <1abe3fa9050112063419d1bd6e@mail.gmail.com>
+References: <41E52FC9.5040406@wisc.edu>
+	<1abe3fa9050112063419d1bd6e@mail.gmail.com>
+Message-ID: <1abe3fa90501120651655a22@mail.gmail.com>
+
+Following up on my own post, here is an internal response from Andreas
+Krause (of Krause & Olson fame), our local reluctant expert on
+validation.   Please don't hold it against him, I was going to
+threaten access to the expresso machine if he didn't comment :-).
+
+> Tony,
+>
+>this list looks good. Going by my experiences so far,
+>
+>the validate() function in Splus is really useful
+>and so is the white paper that Insightful released on their quality
+>assurance policy and techniques.
+>That's the major emphasis.
+>
+>Then there is typically a vendor audit (actually including a visit to the
+>vendor), and here I'm not clear what that might mean for R.
+>I have actually suggested to Insightful that they become some sort of Red
+>Hat or SuSe for R, and they seem to have discussed it.
+>I would put that question forward to the group. Elvis Miller (XLS
+>solutions, isn't it?) might be interested, too.
+>Maybe Ueli can comment on what people actually do during a vendor audit
+>visit.
+>
+>Finally, a validation needs to take place for every new version, and
+>that's a pain given R's fairly frequent updates (compared to S-Plus and
+>SAS at least). Another point of discussion (POD).
+>
+>If we sort these points out, we should be very close to making it come
+>true.
+
+
+best,
+-tony
+
+"Commit early,commit often, and commit in a repository from which we can easily
+roll-back your mistakes" (AJR, 4Jan05).
+
+A.J. Rossini
+blindglobe at gmail.com
+
+
+

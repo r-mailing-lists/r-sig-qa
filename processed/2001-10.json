@@ -1,0 +1,58 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2001-10",
+  "messages": [
+    {
+      "id": "msg-aa8b6d11770a",
+      "message_id": "<15326.49985.747091.316620@gargle.gargle.HOWL>",
+      "from_name": "Martin Maechler",
+      "from_email_hash": "c2c86f22f78a4ecfe6d0e6b4e2be505a3f5beb0470ea88c903688ac536018a98",
+      "date": "2001-10-30T15:12:01Z",
+      "subject": "[R-sig-QA] Re: QA tools -- R-SIG-QA mailing list",
+      "subject_clean": "QA tools -- R-SIG-QA mailing list",
+      "in_reply_to": "<15322.55156.511196.126327@mithrandir.hornik.net>",
+      "references": [
+        "<15322.55156.511196.126327@mithrandir.hornik.net>"
+      ],
+      "body_plain": ">>>>> \"KH\" == Kurt Hornik <Kurt.Hornik at ci.tuwien.ac.at> writes:\n>>>>>         (Sat, 27 Oct 2001 )\n\n    KH> QA-Siggers, Here is a description of changes related to QA tools\n    KH> that I am planning on implementing in the very near future.  It is\n    KH> more an explanation why than an RFC, but of course pls cry out in\n    KH> case you don't like what I am about to do.\n\n    KH> * We already discussed the idea of moving the QA tools and more\n    KH> into a separate standard add-on package called `tools' (before\n    KH> 1.4).  Will do this now, describing the new package as `Tools for\n    KH> package development and administration'.  The following QA tools\n    KH> will be moved into the new package:\n\n    KH> \tcodoc undoc checkAssignFuns checkDocArgs checkDocStyle\n    KH> checkFF checkMethods checkTnF\n\n    KH>   src/scripts/check.in, tests/Makefile.in and the docs will be\n    KH> updated accordingly.\n\nthank you, Kurt.\nAs we know this has happened in the mean time.\n\nI've used the occasion to have a first message for the \n  R-SIG-QA mailing list,\n  R Special Interest Group on  Quality Assurance (of the R project)\n\nwhich I had created several weeks ago on Kurt's request.\n\nA reminder to all of R-core :\n  http://www.stat.math.ethz.ch/mailman/listinfo\n\nlists the current R-SIGs (plus additional mailman lists from here, but\n\t\t\t  there aren't any real ones currently).\n\nhttp://www.stat.math.ethz.ch/mailman/roster/r-sig-qa\ngives the current list of subscribers (that I've added manually),\nKurt, Fritz, Peter, Brian and myself.  This all happened late summer after\nKurt's proposal, and then was subsequently `half forgotten' (as some of the\nother SIGs have been too.. (hint, hint!).\n\nNote that all the SIGs are open for \"the public\" but we (at DSC 2001) had\nagreed to not advertize them really.  All this is open for discussion.\n\n\n    KH> * Now for the real stuff.  John recently pointed out that codoc\n    KH> results on package methods are strange, as they ignore the fact\n    KH> that methods *must* be installed as a save image, which creates\n    KH> additional S code objects (which codoc currently cannot find as it\n    KH> only looks at the S source code).  Hence, for some packages the old\n    KH> philosophy of getting the S source code in package into one file\n    KH> and then reading this into a special environment does not work.\n\n    KH>   (Note that there were two main reasons for doing things this way:\n    KH> we could work on the *sources* and hence not rely on\n    KH> installability, and the test would not interfere with a live R\n    KH> session, and hence could also be done from the prompt.)\n\n    KH>   In fact, even loading a save image into a special environment is\n    KH> not necessarily good enough, as .First.lib also might add S\n    KH> objects.  In a nutshell, this means that we need versions of codoc\n    KH> and friends that `fully' load a package.\n\n    KH>   No basic problem thus far, but there is a catch: many of these\n    KH> tests also need access to the documentation `objects' in the\n    KH> package; the rendered versions (text etc) are not good enough.\n    KH> Hence, to make `live' checking work,\n\n    >>>> We have to *** INSTALL *** the .Rd files. <<<\n\n[gulp! .. but I agree ]\n\n    KH>   Conceptually, this means providing run-time access to\n    KH> documentation objects, which we need to do anyway: currently the\n    KH> .Rd format is the best representation we have (future version might\n    KH> e.g. have them in XML or .rda format).\n\n    KH> * Some details:\n\n    KH>   ** When installing Rd files, we could keep the platform specific\n    KH> subdirs for the time being.  I'd rather not do this: installed\n    KH> packages are always platform specific.\n\n    KH>   ** It is not entirely clear how much of the `do not interfere\n    KH> with a live session' philosophy can or should be kept when using\n    KH> the run time form of the checks.  My current approach would be\n    KH> simple, e.g. codoc(package = \"foo\") would\n\n    KH>      *** detach an already attached version of foo, with a warning;\n\n    KH>      *** attach package foo; which may result in additional\n    KH> packages being attached;\n\n    KH>      *** run the tests.\n\n    KH>      *** on exit, one could try to `restore' the session,\n    KH> i.e. detach everything that was attached by the check, and\n    KH> re-attach an originally attached version of the package.\n\n    KH>      I'd rather not start playing with the cleanups now---does\n    KH> anyone think this would be needed at all?  Most of the time we will\n    KH> run the tests via R CMD check, so there will be no live session.\n\n    KH>   ** The run time version would also overcome some of the problems\n    KH> reported e.g. by P Gilbert with conditional code in a package.\n\n    KH> Enough said.  If anyone thinks that we should not install the Rd\n    KH> files (or spin off the QA stuff into package tools), pls yell soon\n    KH> ...\n\nThanks a lot, Kurt, for building this up!\nMartin",
+      "body_snippet": ">>>>> \"KH\" == Kurt Hornik <Kurt.Hornik at ci.tuwien.ac.at> writes:\n>>>>>         (Sat, 27 Oct 2001 )\n\n    KH> QA-Siggers, Here is a description of changes related to QA tools\n    KH> that I am plannin",
+      "thread_id": "thread-aa8b6d11770a",
+      "thread_depth": 0,
+      "month": "2001-10"
+    },
+    {
+      "id": "msg-fc4bd4734d2c",
+      "message_id": "<15327.41812.767851.247191@mithrandir.hornik.net>",
+      "from_name": "Kurt Hornik",
+      "from_email_hash": "6e49e5789d24862255bc60d8e4c5d8665b01105c5c098a9e7289a025e4708eb8",
+      "date": "2001-10-31T07:08:04Z",
+      "subject": "[R-sig-QA] Re: QA tools -- R-SIG-QA mailing list",
+      "subject_clean": "QA tools -- R-SIG-QA mailing list",
+      "in_reply_to": "<15326.49985.747091.316620@gargle.gargle.HOWL>",
+      "references": [
+        "<15322.55156.511196.126327@mithrandir.hornik.net>",
+        "<15326.49985.747091.316620@gargle.gargle.HOWL>"
+      ],
+      "body_plain": ">>>>> Martin Maechler writes:\n\n>>>>> \"KH\" == Kurt Hornik <Kurt.Hornik at ci.tuwien.ac.at> writes:\n>>>>>         (Sat, 27 Oct 2001 )\n\nKH> QA-Siggers, Here is a description of changes related to QA tools\nKH> that I am planning on implementing in the very near future.  It is\nKH> more an explanation why than an RFC, but of course pls cry out in\nKH> case you don't like what I am about to do.\n\nKH> * We already discussed the idea of moving the QA tools and more\nKH> into a separate standard add-on package called `tools' (before\nKH> 1.4).  Will do this now, describing the new package as `Tools for\nKH> package development and administration'.  The following QA tools\nKH> will be moved into the new package:\n\nKH> codoc undoc checkAssignFuns checkDocArgs checkDocStyle\nKH> checkFF checkMethods checkTnF\n\nKH> src/scripts/check.in, tests/Makefile.in and the docs will be\nKH> updated accordingly.\n\n> thank you, Kurt.\n> As we know this has happened in the mean time.\n\nYep :-)\n\n> I've used the occasion to have a first message for the \n>   R-SIG-QA mailing list,\n>   R Special Interest Group on  Quality Assurance (of the R project)\n\n> which I had created several weeks ago on Kurt's request.\n\n> A reminder to all of R-core :\n>   http://www.stat.math.ethz.ch/mailman/listinfo\n\n> lists the current R-SIGs (plus additional mailman lists from here, but\n> \t\t\t  there aren't any real ones currently).\n\n> http://www.stat.math.ethz.ch/mailman/roster/r-sig-qa\n\n> gives the current list of subscribers (that I've added manually),\n> Kurt, Fritz, Peter, Brian and myself.  This all happened late summer\n> after Kurt's proposal, and then was subsequently `half forgotten' (as\n> some of the other SIGs have been too.. (hint, hint!).\n\nThanks\n\n> Note that all the SIGs are open for \"the public\" but we (at DSC 2001)\n> had agreed to not advertize them really.  All this is open for\n> discussion.\n\nAgreed\n\nKH> * Now for the real stuff.  John recently pointed out that codoc\nKH> results on package methods are strange, as they ignore the fact\nKH> that methods *must* be installed as a save image, which creates\nKH> additional S code objects (which codoc currently cannot find as it\nKH> only looks at the S source code).  Hence, for some packages the old\nKH> philosophy of getting the S source code in package into one file\nKH> and then reading this into a special environment does not work.\n\nKH> (Note that there were two main reasons for doing things this way:\nKH> we could work on the *sources* and hence not rely on\nKH> installability, and the test would not interfere with a live R\nKH> session, and hence could also be done from the prompt.)\n\nKH> In fact, even loading a save image into a special environment is\nKH> not necessarily good enough, as .First.lib also might add S\nKH> objects.  In a nutshell, this means that we need versions of codoc\nKH> and friends that `fully' load a package.\n\nKH> No basic problem thus far, but there is a catch: many of these\nKH> tests also need access to the documentation `objects' in the\nKH> package; the rendered versions (text etc) are not good enough.\nKH> Hence, to make `live' checking work,\n\n>>>>> We have to *** INSTALL *** the .Rd files. <<<\n\n> [gulp! .. but I agree ]\n\nGreat, thanks.  Now that there was a formal vote I can proceed :-)\n\nBest,\n-k",
+      "body_snippet": ">>>>> Martin Maechler writes:\n\n>>>>> \"KH\" == Kurt Hornik <Kurt.Hornik at ci.tuwien.ac.at> writes:\n>>>>>         (Sat, 27 Oct 2001 )\n\nKH> QA-Siggers, Here is a description of changes related to QA tool",
+      "thread_id": "thread-aa8b6d11770a",
+      "thread_depth": 1,
+      "month": "2001-10"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-aa8b6d11770a",
+      "subject": "QA tools -- R-SIG-QA mailing list",
+      "message_count": 2,
+      "participants": [
+        "Kurt Hornik",
+        "Martin Maechler"
+      ],
+      "started": "2001-10-30T15:12:01Z",
+      "last_reply": "2001-10-31T07:08:04Z",
+      "root_message_id": "msg-aa8b6d11770a"
+    }
+  ]
+}

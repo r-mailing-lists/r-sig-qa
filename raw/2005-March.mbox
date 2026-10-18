@@ -1,0 +1,195 @@
+From gregory.r.warnes at pfizer.com  Sun Mar 13 03:21:15 2005
+From: gregory.r.warnes at pfizer.com (Warnes, Gregory R)
+Date: Sat, 12 Mar 2005 21:21:15 -0500
+Subject: [R-sig-QA] Validation of an R installation
+Message-ID: <915D2D65A9986440A277AC5C98AA466F978C3F@groamrexm02.amer.pfizer.com>
+
+I've just gotten down to this level in my inbox.  What is the status of this
+effort?  We at Pfizer are interested in helping things along.
+
+-Greg
+
+> -----Original Message-----
+> From: r-sig-qa-bounces at stat.math.ethz.ch
+> [mailto:r-sig-qa-bounces at stat.math.ethz.ch]On Behalf Of A.J. Rossini
+> Sent: Wednesday, January 12, 2005 9:52 AM
+> To: bates at stat.wisc.edu
+> Cc: r-sig-qa at r-project.org
+> Subject: Re: [R-sig-QA] Validation of an R installation
+> 
+> 
+> Following up on my own post, here is an internal response from Andreas
+> Krause (of Krause & Olson fame), our local reluctant expert on
+> validation.   Please don't hold it against him, I was going to
+> threaten access to the expresso machine if he didn't comment :-).
+> 
+> > Tony,
+> >
+> >this list looks good. Going by my experiences so far,
+> >
+> >the validate() function in Splus is really useful
+> >and so is the white paper that Insightful released on their quality
+> >assurance policy and techniques.
+> >That's the major emphasis.
+> >
+> >Then there is typically a vendor audit (actually including a 
+> visit to the
+> >vendor), and here I'm not clear what that might mean for R.
+> >I have actually suggested to Insightful that they become 
+> some sort of Red
+> >Hat or SuSe for R, and they seem to have discussed it.
+> >I would put that question forward to the group. Elvis Miller (XLS
+> >solutions, isn't it?) might be interested, too.
+> >Maybe Ueli can comment on what people actually do during a 
+> vendor audit
+> >visit.
+> >
+> >Finally, a validation needs to take place for every new version, and
+> >that's a pain given R's fairly frequent updates (compared to 
+> S-Plus and
+> >SAS at least). Another point of discussion (POD).
+> >
+> >If we sort these points out, we should be very close to 
+> making it come
+> >true.
+> 
+> 
+> best,
+> -tony
+> 
+> "Commit early,commit often, and commit in a repository from 
+> which we can easily
+> roll-back your mistakes" (AJR, 4Jan05).
+> 
+> A.J. Rossini
+> blindglobe at gmail.com
+> 
+> _______________________________________________
+> R-sig-QA at stat.math.ethz.ch mailing list
+> https://stat.ethz.ch/mailman/listinfo/r-sig-qa
+> 
+
+
+LEGAL NOTICE\ Unless expressly stated otherwise, this messag...{{dropped}}
+
+
+
+From blindglobe at gmail.com  Sun Mar 13 10:38:41 2005
+From: blindglobe at gmail.com (A.J. Rossini)
+Date: Sun, 13 Mar 2005 10:38:41 +0100
+Subject: [R-sig-QA] Validation of an R installation
+In-Reply-To: <915D2D65A9986440A277AC5C98AA466F978C3F@groamrexm02.amer.pfizer.com>
+References: <915D2D65A9986440A277AC5C98AA466F978C3F@groamrexm02.amer.pfizer.com>
+Message-ID: <1abe3fa905031301382e33f78f@mail.gmail.com>
+
+We had an interesting discussion.  I've updated my white paper on it,
+but havn't send it out yet (to Frank H., you, and some internal
+folks).
+
+Most of the delays are from having to pointed address issues related to:
+
+1. R isn't as special/focused as WinBUGS
+2. R has a commercial alternative.
+
+Both short-circuit some of the "exception rules" that we have.
+
+One move that has helped is the BUGS folks movement towards R with
+OpenBUGS and rbugs, as well as the potential release of Xpose for R
+(NONMEM post-processor), though the latter won't happen anytime soon.
+
+The other critical need is for R-core to publish a whitepaper
+describing/justifying development practices, goals, and testing/QA/QC
+strategies.  It's not that the components aren't there for IQ/OQ/PQ,
+but they need to be made explicit.  Martin and Doug were discussing
+some issues related to it, but for various critical reasons, I don't
+think it'll be done any time soon.
+
+best,
+-tony
+
+
+On Sat, 12 Mar 2005 21:21:15 -0500, Warnes, Gregory R
+<gregory.r.warnes at pfizer.com> wrote:
+> I've just gotten down to this level in my inbox.  What is the status of this
+> effort?  We at Pfizer are interested in helping things along.
+> 
+> -Greg
+> 
+> > -----Original Message-----
+> > From: r-sig-qa-bounces at stat.math.ethz.ch
+> > [mailto:r-sig-qa-bounces at stat.math.ethz.ch]On Behalf Of A.J. Rossini
+> > Sent: Wednesday, January 12, 2005 9:52 AM
+> > To: bates at stat.wisc.edu
+> > Cc: r-sig-qa at r-project.org
+> > Subject: Re: [R-sig-QA] Validation of an R installation
+> >
+> >
+> > Following up on my own post, here is an internal response from Andreas
+> > Krause (of Krause & Olson fame), our local reluctant expert on
+> > validation.   Please don't hold it against him, I was going to
+> > threaten access to the expresso machine if he didn't comment :-).
+> >
+> > > Tony,
+> > >
+> > >this list looks good. Going by my experiences so far,
+> > >
+> > >the validate() function in Splus is really useful
+> > >and so is the white paper that Insightful released on their quality
+> > >assurance policy and techniques.
+> > >That's the major emphasis.
+> > >
+> > >Then there is typically a vendor audit (actually including a
+> > visit to the
+> > >vendor), and here I'm not clear what that might mean for R.
+> > >I have actually suggested to Insightful that they become
+> > some sort of Red
+> > >Hat or SuSe for R, and they seem to have discussed it.
+> > >I would put that question forward to the group. Elvis Miller (XLS
+> > >solutions, isn't it?) might be interested, too.
+> > >Maybe Ueli can comment on what people actually do during a
+> > vendor audit
+> > >visit.
+> > >
+> > >Finally, a validation needs to take place for every new version, and
+> > >that's a pain given R's fairly frequent updates (compared to
+> > S-Plus and
+> > >SAS at least). Another point of discussion (POD).
+> > >
+> > >If we sort these points out, we should be very close to
+> > making it come
+> > >true.
+> >
+> >
+> > best,
+> > -tony
+> >
+> > "Commit early,commit often, and commit in a repository from
+> > which we can easily
+> > roll-back your mistakes" (AJR, 4Jan05).
+> >
+> > A.J. Rossini
+> > blindglobe at gmail.com
+> >
+> > _______________________________________________
+> > R-sig-QA at stat.math.ethz.ch mailing list
+> > https://stat.ethz.ch/mailman/listinfo/r-sig-qa
+> >
+> 
+> LEGAL NOTICE
+> Unless expressly stated otherwise, this message is confidential and may be privileged. It is intended for the addressee(s) only. Access to this E-mail by anyone else is unauthorized. If you are not an addressee, any disclosure or copying of the contents of this E-mail or any action taken (or not taken) in reliance on it is unauthorized and may be unlawful. If you are not an addressee, please inform the sender immediately.
+> 
+> 
+
+
+-- 
+best,
+-tony
+
+"Commit early,commit often, and commit in a repository from which we can easily
+roll-back your mistakes" (AJR, 4Jan05).
+
+A.J. Rossini
+blindglobe at gmail.com
+
+
+

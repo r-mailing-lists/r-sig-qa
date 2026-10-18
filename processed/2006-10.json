@@ -1,0 +1,36 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2006-10",
+  "messages": [
+    {
+      "id": "msg-d40e2f2b6643",
+      "message_id": "<4523BC3D.2030701@partners.org>",
+      "from_name": "Joel J. Adamson",
+      "from_email_hash": "e6af39ad135644daaf8113061673998da25ac6c4f223c7cbfe9ce3dca4cf3004",
+      "date": "2006-10-04T13:50:53Z",
+      "subject": "[R-sig-QA] Successful Build of 2.4",
+      "subject_clean": "Successful Build of 2.4",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Dear List,\n\nLast night I successfully built R 2.4 from source on a Dell Dimension \n5100C desktop running PCLinuxOS, a fork of Mandrake/Mandriva.\n\nIt was pretty exciting for me, and I thought you'd like to know how \neasily it worked.\n\nThanks and have a good day,\nJoel\n\n-- \nJoel J. Adamson \nBiostatistician\nPediatric Psychopharmacology Research\nMassachusetts General Hospital\n55 Fruit St., Warren 637\nBoston, MA 02114\n617-643-1432\n303-880-3109 (mobile)",
+      "body_snippet": "Dear List,\n\nLast night I successfully built R 2.4 from source on a Dell Dimension \n5100C desktop running PCLinuxOS, a fork of Mandrake/Mandriva.\n\nIt was pretty exciting for me, and I thought you'd lik",
+      "thread_id": "thread-d40e2f2b6643",
+      "thread_depth": 0,
+      "month": "2006-10"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-d40e2f2b6643",
+      "subject": "Successful Build of 2.4",
+      "message_count": 1,
+      "participants": [
+        "Joel J. Adamson"
+      ],
+      "started": "2006-10-04T13:50:53Z",
+      "last_reply": "2006-10-04T13:50:53Z",
+      "root_message_id": "msg-d40e2f2b6643"
+    }
+  ]
+}

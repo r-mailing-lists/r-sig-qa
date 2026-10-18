@@ -1,0 +1,158 @@
+From maechler at stat.math.ethz.ch  Tue May  6 09:12:06 2003
+From: maechler at stat.math.ethz.ch (Martin Maechler)
+Date: Tue, 6 May 2003 09:12:06 +0200
+Subject: [R-sig-QA] R "Validation" on the R-SIG-QA mailing list?
+Message-ID: <16055.24646.493092.273775@gargle.gargle.HOWL>
+
+You probably have followed at least peripherally Jim Garret's
+initiative (on R-help) to form a group of R users interested in 
+"validation" of R in the sense of "Software validation" that big
+companies, particularly pharmaceuticals, use.
+
+He and I know that this a bit different from the original idea
+of the R-SIG-QA list -- but then, this list has been dormant (to
+put it positively) for such a long time that I wonder if the
+"validation" crowd (12 people) shouldn't join this list and
+bring it to life.
+
+If I don't hear protests within the next 6 hours, I'll do the
+change (the only 6 people on our list now all live in western
+Europe).
+
+Martin
+
+
+
+From hornik at ci.tuwien.ac.at  Wed May  7 07:55:10 2003
+From: hornik at ci.tuwien.ac.at (Kurt Hornik)
+Date: Wed, 7 May 2003 07:55:10 +0200
+Subject: [R-sig-QA] R "Validation" on the R-SIG-QA mailing list?
+In-Reply-To: <16055.24646.493092.273775@gargle.gargle.HOWL>
+References: <16055.24646.493092.273775@gargle.gargle.HOWL>
+Message-ID: <16056.40894.153051.180786@mithrandir.hornik.net>
+
+>>>>> Martin Maechler writes:
+
+> You probably have followed at least peripherally Jim Garret's
+> initiative (on R-help) to form a group of R users interested in 
+> "validation" of R in the sense of "Software validation" that big
+> companies, particularly pharmaceuticals, use.
+
+I have not (yet).
+
+> He and I know that this a bit different from the original idea
+> of the R-SIG-QA list -- but then, this list has been dormant (to
+> put it positively) for such a long time that I wonder if the
+> "validation" crowd (12 people) shouldn't join this list and
+> bring it to life.
+
+> If I don't hear protests within the next 6 hours, I'll do the
+> change (the only 6 people on our list now all live in western
+> Europe).
+
+I'd certainly be happy to see progress in this direction, so that we can
+finally have papers on accuracy in R :-)
+
+So pls go ahead.
+
+Best
+-k
+
+
+
+From Jim_Garrett at bd.com  Wed May 14 18:37:39 2003
+From: Jim_Garrett at bd.com (Jim_Garrett at bd.com)
+Date: Wed, 14 May 2003 12:37:39 -0400
+Subject: [R-sig-QA] wiki update, and documenting R development processes
+Message-ID: <OF901EF516.97589B2F-ON85256D26.005A1887@bd.com>
+
+Wiki update:  Warner Engl has added some regulatory guidelines in the
+"FDARegulations" area (which is now not FDA-specific!).  I've just entered
+a lengthy review of the British guidance he contributed.  Please feel free
+to edit my review with your own comments; the wiki is at
+
+http://software.biostat.washington.edu/wikis/rvalid/FrontPage
+
+I've only read closely this one document, but it's already evident that
+written procedures are going to be very important.  Corporations using R
+will be looking for a formal "quality system" including a document control
+system, and documents specifying the development process (Standard
+Operating Procedures).  I know that the R team *has* some standard
+procedures.  Are there documents specifying these procedures?
+
+I would like to invite anyone who knows, especially members of the
+development team, to find any such documents that may exist, and if
+documents describing standard processes don't exist, could someone please
+contribute descriptions of these processes?
+
+Thanks!
+
+-Jim
+
+**********************************************************************
+This message is intended only for the designated recipient(s).  ... {{dropped}}
+
+
+
+From hornik at ci.tuwien.ac.at  Thu May 15 19:35:02 2003
+From: hornik at ci.tuwien.ac.at (Kurt Hornik)
+Date: Thu, 15 May 2003 19:35:02 +0200
+Subject: [R-sig-QA] wiki update, and documenting R development processes
+In-Reply-To: <OF901EF516.97589B2F-ON85256D26.005A1887@bd.com>
+References: <OF901EF516.97589B2F-ON85256D26.005A1887@bd.com>
+Message-ID: <16067.53190.652860.687914@mithrandir.hornik.net>
+
+>>>>> Jim Garrett writes:
+
+> Wiki update:  Warner Engl has added some regulatory guidelines in the
+> "FDARegulations" area (which is now not FDA-specific!).  I've just entered
+> a lengthy review of the British guidance he contributed.  Please feel free
+> to edit my review with your own comments; the wiki is at
+
+> http://software.biostat.washington.edu/wikis/rvalid/FrontPage
+
+> I've only read closely this one document, but it's already evident
+> that written procedures are going to be very important.  Corporations
+> using R will be looking for a formal "quality system" including a
+> document control system, and documents specifying the development
+> process (Standard Operating Procedures).  I know that the R team *has*
+> some standard procedures.  Are there documents specifying these
+> procedures?
+
+Not yet ...
+
+I will eventually need to write a paper on the current QC tools which
+should also shed some light on exisiting QA processes.  In a nutshell, R
+Core members are asked to commit code changes only provided that these
+passed make check-devel [or make check-all] on their local system.  Of
+course, this does not mean a lot if one does not know which tests these
+check suites contain.
+
+One also needs to be careful about what it meant by 'R'.  You may find
+some of my comments on the current two-tier development model in
+
+@InProceedings{hornik:Hornik:2002,
+  author       = {Kurt Hornik},
+  title        = {Tools and Strategies for Managing Software Library
+                  Repositories},
+  booktitle    = {Statistics in an Era of Technological Change,
+                  Proceedings of the 2002 Joint Statistical Meetings},
+  pages        = {1490--1493},
+  year         = 2002,
+}
+
+of interest.
+
+This, in a rather narrative way, describes the standard processes on the
+CRAN main repository side of R.
+
+> I would like to invite anyone who knows, especially members of the
+> development team, to find any such documents that may exist, and if
+> documents describing standard processes don't exist, could someone
+> please contribute descriptions of these processes?
+
+best
+-k
+
+
+

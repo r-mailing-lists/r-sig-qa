@@ -1,0 +1,82 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2008-11",
+  "messages": [
+    {
+      "id": "msg-1fac64ea8e52",
+      "message_id": "<49302B72.9080606@comcast.net>",
+      "from_name": "Mary A. Marion",
+      "from_email_hash": "6d72ac9c1b7b2ae39f9d75a017288a21df2a91b4529d591da823734d497a7a74",
+      "date": "2008-11-28T17:33:38Z",
+      "subject": "[R-sig-QA] create groups based upon different levels of 4 factors",
+      "subject_clean": "create groups based upon different levels of 4 factors",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello to the R gurus,\n\nMy data is bound in a dataframe.\ndata2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\ndata2[1:5,]\n\nI want to create groups based upon different levels of 4 factors\nind<- as.logical ( (digrp=1) & (gender=1) & (agegrp=\"[20-35)\") & \n(bmigrp=\"[0,18.5)\" ) );\n\nError in (digrp = 1) & (gender = 1) & (agegrp = \"[20-35)\") :\n  operations are possible only for numeric or logical types\n >\nI keep getting an error message.  How do I see that the above statement \nis in correct type format?\n#operations are possible only for numeric or logical types.   why does \nit not include bmigrp?\n\nThanks.\n\nSincerely,\nMary A. Marion",
+      "body_snippet": "Hello to the R gurus,\n\nMy data is bound in a dataframe.\ndata2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\ndata2[1:5,]\n\nI want to create groups based upon different levels of 4 factors\nind<- as.",
+      "thread_id": "thread-1fac64ea8e52",
+      "thread_depth": 0,
+      "month": "2008-11"
+    },
+    {
+      "id": "msg-48d59a4f8552",
+      "message_id": "<4930331E.5020301@comcast.net>",
+      "from_name": "Mary A. Marion",
+      "from_email_hash": "6d72ac9c1b7b2ae39f9d75a017288a21df2a91b4529d591da823734d497a7a74",
+      "date": "2008-11-28T18:06:22Z",
+      "subject": "[R-sig-QA] [Fwd: create groups based upon different levels of 4 factors] update 1",
+      "subject_clean": "[Fwd: create groups based upon different levels of 4 factors] update 1",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Hello to the R gurus,\n\nMy data is bound in a dataframe.\ndata2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\ndata2[1:5,]\n\nI want to create groups based upon different levels of 4 factors\nind<- as.logical ( (digrp=1) & (gender=1) & (agegrp=\"[20-35)\") & \n(bmigrp=\"[0,18.5)\" ) );\n\nError in (digrp = 1) & (gender = 1) & (agegrp = \"[20-35)\") :\n operations are possible only for numeric or logical types\n>\nI keep getting an error message.  How do I see that the above statement \nis in correct type format?\n#operations are possible only for numeric or logical types.   why does \nit not include bmigrp?\n\nData was created as follows:\n\n#BMI CLASSIFICATION\nbreaks<-c(0,18.5,25,30,200)\nbmigrp<-cut(bmi,breaks=breaks,right=FALSE)\n\n#AGE GROUPS\nbreaks<-c(1,35,60,90)\nagegrp<-cut(age,breaks=breaks,right=FALSE)\n\n#DI GROUPS\n#1=yes has diabetes, 2=no does not have\ndigrp<-as.factor(join5[,\"DIQ010\"])\n\n#GENDER GROUPS\n#1=male, 2=female\ngender<-as.factor(join5[,\"RIAGENDR\"])\n\n#FORM DATA FRAME TO ANALYZE\ndata2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\ndata2[1:5,]\n\nThanks.\n\nSincerely,\nMary A. Marion",
+      "body_snippet": "Hello to the R gurus,\n\nMy data is bound in a dataframe.\ndata2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\ndata2[1:5,]\n\nI want to create groups based upon different levels of 4 factors\nind<- as.",
+      "thread_id": "thread-48d59a4f8552",
+      "thread_depth": 0,
+      "month": "2008-11"
+    },
+    {
+      "id": "msg-14ee458b1f9a",
+      "message_id": "<40e66e0b0811281040x35928424h4715d593c930dd25@mail.gmail.com>",
+      "from_name": "Douglas Bates",
+      "from_email_hash": "c908588836123be177df15f4b3132be3a2b4b95c4eaeddcc72b433a3981bb1b3",
+      "date": "2008-11-28T18:40:26Z",
+      "subject": "[R-sig-QA] [Fwd: create groups based upon different levels of 4 factors] update 1",
+      "subject_clean": "[Fwd: create groups based upon different levels of 4 factors] update 1",
+      "in_reply_to": "<4930331E.5020301@comcast.net>",
+      "references": [
+        "<4930331E.5020301@comcast.net>"
+      ],
+      "body_plain": "On Fri, Nov 28, 2008 at 12:06 PM, Mary A. Marion <mmstat at comcast.net> wrote:\n> Hello to the R gurus,\n>\n> My data is bound in a dataframe.\n> data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\n> data2[1:5,]\n>\n> I want to create groups based upon different levels of 4 factors\n> ind<- as.logical ( (digrp=1) & (gender=1) & (agegrp=\"[20-35)\") &\n> (bmigrp=\"[0,18.5)\" ) );\n\nUse \"==\" not \"=\" for comparisons.\n\nind <- (digrp == 1) & (gender == 1) & ...\n\nThere are many other comments that could be made regarding your code\nsuch as converting gender to a factor with meaningful labels and not\ncalling a S3 method like cbind.data.frame directly but that should get\nyou started.\n\n> Error in (digrp = 1) & (gender = 1) & (agegrp = \"[20-35)\") :\n> operations are possible only for numeric or logical types\n>>\n> I keep getting an error message.  How do I see that the above statement is\n> in correct type format?\n> #operations are possible only for numeric or logical types.   why does it\n> not include bmigrp?\n>\n> Data was created as follows:\n>\n> #BMI CLASSIFICATION\n> breaks<-c(0,18.5,25,30,200)\n> bmigrp<-cut(bmi,breaks=breaks,right=FALSE)\n>\n> #AGE GROUPS\n> breaks<-c(1,35,60,90)\n> agegrp<-cut(age,breaks=breaks,right=FALSE)\n>\n> #DI GROUPS\n> #1=yes has diabetes, 2=no does not have\n> digrp<-as.factor(join5[,\"DIQ010\"])\n>\n> #GENDER GROUPS\n> #1=male, 2=female\n> gender<-as.factor(join5[,\"RIAGENDR\"])\n>\n> #FORM DATA FRAME TO ANALYZE\n> data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\n> data2[1:5,]\n>\n> Thanks.\n>\n> Sincerely,\n> Mary A. Marion\n>\n> _______________________________________________\n> R-sig-QA at stat.math.ethz.ch mailing list\n> https://stat.ethz.ch/mailman/listinfo/r-sig-qa\n>",
+      "body_snippet": "On Fri, Nov 28, 2008 at 12:06 PM, Mary A. Marion <mmstat at comcast.net> wrote:\n> Hello to the R gurus,\n>\n> My data is bound in a dataframe.\n> data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)\n",
+      "thread_id": "thread-48d59a4f8552",
+      "thread_depth": 1,
+      "month": "2008-11"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-1fac64ea8e52",
+      "subject": "create groups based upon different levels of 4 factors",
+      "message_count": 1,
+      "participants": [
+        "Mary A. Marion"
+      ],
+      "started": "2008-11-28T17:33:38Z",
+      "last_reply": "2008-11-28T17:33:38Z",
+      "root_message_id": "msg-1fac64ea8e52"
+    },
+    {
+      "id": "thread-48d59a4f8552",
+      "subject": "[Fwd: create groups based upon different levels of 4 factors] update 1",
+      "message_count": 2,
+      "participants": [
+        "Douglas Bates",
+        "Mary A. Marion"
+      ],
+      "started": "2008-11-28T18:06:22Z",
+      "last_reply": "2008-11-28T18:40:26Z",
+      "root_message_id": "msg-48d59a4f8552"
+    }
+  ]
+}

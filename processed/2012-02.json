@@ -1,0 +1,36 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2012-02",
+  "messages": [
+    {
+      "id": "msg-e74a339eb3f9",
+      "message_id": "<CAOLJph=9sZdaX-g7KFL0sah_Q0nJiS4vfZ+PtFZmHXUK9uSN3w@mail.gmail.com>",
+      "from_name": "Charles Determan Jr",
+      "from_email_hash": "bb70b26b1bff11738051eff1944db8e2c688e4d139ca3fa870eab21732fedfc3",
+      "date": "2012-02-23T17:41:17Z",
+      "subject": "[R-sig-QA] Validation of PLS regression",
+      "subject_clean": "Validation of PLS regression",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/r-sig-qa/attachments/20120223/4cc1ab34/attachment.pl>",
+      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/r-sig-qa/attachments/20120223/4cc1ab34/attachment.pl>",
+      "thread_id": "thread-e74a339eb3f9",
+      "thread_depth": 0,
+      "month": "2012-02"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-e74a339eb3f9",
+      "subject": "Validation of PLS regression",
+      "message_count": 1,
+      "participants": [
+        "Charles Determan Jr"
+      ],
+      "started": "2012-02-23T17:41:17Z",
+      "last_reply": "2012-02-23T17:41:17Z",
+      "root_message_id": "msg-e74a339eb3f9"
+    }
+  ]
+}

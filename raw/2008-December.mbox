@@ -1,0 +1,70 @@
+From maechler at stat.math.ethz.ch  Mon Dec  1 08:48:36 2008
+From: maechler at stat.math.ethz.ch (Martin Maechler)
+Date: Mon, 1 Dec 2008 08:48:36 +0100
+Subject: [R-sig-QA] [Fwd: create groups based upon different levels of 4
+	factors] update 1
+In-Reply-To: <4930331E.5020301@comcast.net>
+References: <4930331E.5020301@comcast.net>
+Message-ID: <18739.38612.743708.32403@stat.math.ethz.ch>
+
+Hello Mary,
+
+you snt this to  R-SIG-QA,  an almost-defunct mailing list,
+
+"R Special Interest Group on Quality Assurance -OF R ITSELF-"
+
+
+You really should repost this to R-help, 
+if you are still interested in an answer.
+
+Best regards,
+Martin Maechler
+
+>>>>> "MAM" == Mary A Marion <mmstat at comcast.net>
+>>>>>     on Fri, 28 Nov 2008 13:06:22 -0500 writes:
+
+    MAM> Hello to the R gurus, My data is bound in a dataframe.
+    MAM> data2<-cbind.data.frame(digrp,gender, agegrp,
+    MAM> bmigrp,wt) data2[1:5,]
+
+    MAM> I want to create groups based upon different levels of
+    MAM> 4 factors ind<- as.logical ( (digrp=1) & (gender=1) &
+    MAM> (agegrp="[20-35)") & (bmigrp="[0,18.5)" ) );
+
+    MAM> Error in (digrp = 1) & (gender = 1) & (agegrp =
+    MAM> "[20-35)") : operations are possible only for numeric
+    MAM> or logical types
+    >> 
+    MAM> I keep getting an error message.  How do I see that the
+    MAM> above statement is in correct type format?  #operations
+    MAM> are possible only for numeric or logical types.  why
+    MAM> does it not include bmigrp?
+
+    MAM> Data was created as follows:
+
+    MAM> #BMI CLASSIFICATION breaks<-c(0,18.5,25,30,200)
+    MAM> bmigrp<-cut(bmi,breaks=breaks,right=FALSE)
+
+    MAM> #AGE GROUPS breaks<-c(1,35,60,90)
+    MAM> agegrp<-cut(age,breaks=breaks,right=FALSE)
+
+    MAM> #DI GROUPS #1=yes has diabetes, 2=no does not have
+    MAM> digrp<-as.factor(join5[,"DIQ010"])
+
+    MAM> #GENDER GROUPS #1=male, 2=female
+    MAM> gender<-as.factor(join5[,"RIAGENDR"])
+
+    MAM> #FORM DATA FRAME TO ANALYZE
+    MAM> data2<-cbind.data.frame(digrp,gender, agegrp,
+    MAM> bmigrp,wt) data2[1:5,]
+
+    MAM> Thanks.
+
+    MAM> Sincerely, Mary A. Marion
+
+    MAM> _______________________________________________
+    MAM> R-sig-QA at stat.math.ethz.ch mailing list
+    MAM> https://stat.ethz.ch/mailman/listinfo/r-sig-qa
+
+
+

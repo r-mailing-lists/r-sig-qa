@@ -1,0 +1,38 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2012-10",
+  "messages": [
+    {
+      "id": "msg-1a016b610a92",
+      "message_id": "<50800D14.3080602@web.de>",
+      "from_name": "Ulrike",
+      "from_email_hash": "6fa15e692d40c05c972eb0f73e2c98a09dc381c1c68356e5f675099b2a3f71b5",
+      "date": "2012-10-18T14:07:16Z",
+      "subject": "[R-sig-QA] package reviews",
+      "subject_clean": "package reviews",
+      "in_reply_to": "<mailman.0.1350567670.19858.r-sig-qa@r-project.org>",
+      "references": [
+        "<mailman.0.1350567670.19858.r-sig-qa@r-project.org>"
+      ],
+      "body_plain": "Hi,\n\nI've just signed up to this list, but found it's not very active.\nI signed up with one idea in mind, which might or might not be \nrealistic, but I would be interested to hear what people think about it.\nYou certainly all know that at websites like Amazon etc, people who \nbought certain products or bought a book can write a review about it. \nSince there are so many user-written functions and packages in R, maybe \nit would be good to have a similar feedback forum. So, the idea is to \nhave some forum/page of some form, where users who have used a certain \nnew package, could write a short review about it. This would be not just \nbe useful for reporting bugs, but more general, whether there are any \nthings, that the user expected, which are missing in the package. Or \ngeneral comments what is good or not so good about this package.\nWhat do people think about this?\n\nBest wishes,\nUlrike",
+      "body_snippet": "Hi,\n\nI've just signed up to this list, but found it's not very active.\nI signed up with one idea in mind, which might or might not be \nrealistic, but I would be interested to hear what people think ab",
+      "thread_id": "thread-1a016b610a92",
+      "thread_depth": 0,
+      "month": "2012-10"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-1a016b610a92",
+      "subject": "package reviews",
+      "message_count": 1,
+      "participants": [
+        "Ulrike"
+      ],
+      "started": "2012-10-18T14:07:16Z",
+      "last_reply": "2012-10-18T14:07:16Z",
+      "root_message_id": "msg-1a016b610a92"
+    }
+  ]
+}

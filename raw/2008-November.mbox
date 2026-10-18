@@ -1,0 +1,156 @@
+From mmstat at comcast.net  Fri Nov 28 18:33:38 2008
+From: mmstat at comcast.net (Mary A. Marion)
+Date: Fri, 28 Nov 2008 12:33:38 -0500
+Subject: [R-sig-QA] create groups based upon different levels of 4 factors
+Message-ID: <49302B72.9080606@comcast.net>
+
+Hello to the R gurus,
+
+My data is bound in a dataframe.
+data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)
+data2[1:5,]
+
+I want to create groups based upon different levels of 4 factors
+ind<- as.logical ( (digrp=1) & (gender=1) & (agegrp="[20-35)") & 
+(bmigrp="[0,18.5)" ) );
+
+Error in (digrp = 1) & (gender = 1) & (agegrp = "[20-35)") :
+  operations are possible only for numeric or logical types
+ >
+I keep getting an error message.  How do I see that the above statement 
+is in correct type format?
+#operations are possible only for numeric or logical types.   why does 
+it not include bmigrp?
+
+Thanks.
+
+Sincerely,
+Mary A. Marion
+
+
+
+From mmstat at comcast.net  Fri Nov 28 19:06:22 2008
+From: mmstat at comcast.net (Mary A. Marion)
+Date: Fri, 28 Nov 2008 13:06:22 -0500
+Subject: [R-sig-QA] [Fwd: create groups based upon different levels of 4
+ factors] update 1
+Message-ID: <4930331E.5020301@comcast.net>
+
+Hello to the R gurus,
+
+My data is bound in a dataframe.
+data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)
+data2[1:5,]
+
+I want to create groups based upon different levels of 4 factors
+ind<- as.logical ( (digrp=1) & (gender=1) & (agegrp="[20-35)") & 
+(bmigrp="[0,18.5)" ) );
+
+Error in (digrp = 1) & (gender = 1) & (agegrp = "[20-35)") :
+ operations are possible only for numeric or logical types
+>
+I keep getting an error message.  How do I see that the above statement 
+is in correct type format?
+#operations are possible only for numeric or logical types.   why does 
+it not include bmigrp?
+
+Data was created as follows:
+
+#BMI CLASSIFICATION
+breaks<-c(0,18.5,25,30,200)
+bmigrp<-cut(bmi,breaks=breaks,right=FALSE)
+
+#AGE GROUPS
+breaks<-c(1,35,60,90)
+agegrp<-cut(age,breaks=breaks,right=FALSE)
+
+#DI GROUPS
+#1=yes has diabetes, 2=no does not have
+digrp<-as.factor(join5[,"DIQ010"])
+
+#GENDER GROUPS
+#1=male, 2=female
+gender<-as.factor(join5[,"RIAGENDR"])
+
+#FORM DATA FRAME TO ANALYZE
+data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)
+data2[1:5,]
+
+Thanks.
+
+Sincerely,
+Mary A. Marion
+
+
+
+From bates at stat.wisc.edu  Fri Nov 28 19:40:26 2008
+From: bates at stat.wisc.edu (Douglas Bates)
+Date: Fri, 28 Nov 2008 12:40:26 -0600
+Subject: [R-sig-QA] [Fwd: create groups based upon different levels of 4
+	factors] update 1
+In-Reply-To: <4930331E.5020301@comcast.net>
+References: <4930331E.5020301@comcast.net>
+Message-ID: <40e66e0b0811281040x35928424h4715d593c930dd25@mail.gmail.com>
+
+On Fri, Nov 28, 2008 at 12:06 PM, Mary A. Marion <mmstat at comcast.net> wrote:
+> Hello to the R gurus,
+>
+> My data is bound in a dataframe.
+> data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)
+> data2[1:5,]
+>
+> I want to create groups based upon different levels of 4 factors
+> ind<- as.logical ( (digrp=1) & (gender=1) & (agegrp="[20-35)") &
+> (bmigrp="[0,18.5)" ) );
+
+Use "==" not "=" for comparisons.
+
+ind <- (digrp == 1) & (gender == 1) & ...
+
+There are many other comments that could be made regarding your code
+such as converting gender to a factor with meaningful labels and not
+calling a S3 method like cbind.data.frame directly but that should get
+you started.
+
+> Error in (digrp = 1) & (gender = 1) & (agegrp = "[20-35)") :
+> operations are possible only for numeric or logical types
+>>
+> I keep getting an error message.  How do I see that the above statement is
+> in correct type format?
+> #operations are possible only for numeric or logical types.   why does it
+> not include bmigrp?
+>
+> Data was created as follows:
+>
+> #BMI CLASSIFICATION
+> breaks<-c(0,18.5,25,30,200)
+> bmigrp<-cut(bmi,breaks=breaks,right=FALSE)
+>
+> #AGE GROUPS
+> breaks<-c(1,35,60,90)
+> agegrp<-cut(age,breaks=breaks,right=FALSE)
+>
+> #DI GROUPS
+> #1=yes has diabetes, 2=no does not have
+> digrp<-as.factor(join5[,"DIQ010"])
+>
+> #GENDER GROUPS
+> #1=male, 2=female
+> gender<-as.factor(join5[,"RIAGENDR"])
+>
+> #FORM DATA FRAME TO ANALYZE
+> data2<-cbind.data.frame(digrp,gender, agegrp, bmigrp,wt)
+> data2[1:5,]
+>
+> Thanks.
+>
+> Sincerely,
+> Mary A. Marion
+>
+> _______________________________________________
+> R-sig-QA at stat.math.ethz.ch mailing list
+> https://stat.ethz.ch/mailman/listinfo/r-sig-qa
+>
+
+
+

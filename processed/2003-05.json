@@ -1,0 +1,101 @@
+{
+  "list": "r-sig-qa",
+  "description": "",
+  "month": "2003-05",
+  "messages": [
+    {
+      "id": "msg-dcda55d75934",
+      "message_id": "<16055.24646.493092.273775@gargle.gargle.HOWL>",
+      "from_name": "Martin Maechler",
+      "from_email_hash": "c2c86f22f78a4ecfe6d0e6b4e2be505a3f5beb0470ea88c903688ac536018a98",
+      "date": "2003-05-06T07:12:06Z",
+      "subject": "[R-sig-QA] R \"Validation\" on the R-SIG-QA mailing list?",
+      "subject_clean": "R \"Validation\" on the R-SIG-QA mailing list?",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "You probably have followed at least peripherally Jim Garret's\ninitiative (on R-help) to form a group of R users interested in \n\"validation\" of R in the sense of \"Software validation\" that big\ncompanies, particularly pharmaceuticals, use.\n\nHe and I know that this a bit different from the original idea\nof the R-SIG-QA list -- but then, this list has been dormant (to\nput it positively) for such a long time that I wonder if the\n\"validation\" crowd (12 people) shouldn't join this list and\nbring it to life.\n\nIf I don't hear protests within the next 6 hours, I'll do the\nchange (the only 6 people on our list now all live in western\nEurope).\n\nMartin",
+      "body_snippet": "You probably have followed at least peripherally Jim Garret's\ninitiative (on R-help) to form a group of R users interested in \n\"validation\" of R in the sense of \"Software validation\" that big\ncompanie",
+      "thread_id": "thread-dcda55d75934",
+      "thread_depth": 0,
+      "month": "2003-05"
+    },
+    {
+      "id": "msg-5f7f9902438a",
+      "message_id": "<16056.40894.153051.180786@mithrandir.hornik.net>",
+      "from_name": "Kurt Hornik",
+      "from_email_hash": "c259ef400cb20a19b00d24612508e4d9cef4c260cf545ea89764819aaa0fcbd4",
+      "date": "2003-05-07T05:55:10Z",
+      "subject": "[R-sig-QA] R \"Validation\" on the R-SIG-QA mailing list?",
+      "subject_clean": "R \"Validation\" on the R-SIG-QA mailing list?",
+      "in_reply_to": "<16055.24646.493092.273775@gargle.gargle.HOWL>",
+      "references": [
+        "<16055.24646.493092.273775@gargle.gargle.HOWL>"
+      ],
+      "body_plain": ">>>>> Martin Maechler writes:\n\n> You probably have followed at least peripherally Jim Garret's\n> initiative (on R-help) to form a group of R users interested in \n> \"validation\" of R in the sense of \"Software validation\" that big\n> companies, particularly pharmaceuticals, use.\n\nI have not (yet).\n\n> He and I know that this a bit different from the original idea\n> of the R-SIG-QA list -- but then, this list has been dormant (to\n> put it positively) for such a long time that I wonder if the\n> \"validation\" crowd (12 people) shouldn't join this list and\n> bring it to life.\n\n> If I don't hear protests within the next 6 hours, I'll do the\n> change (the only 6 people on our list now all live in western\n> Europe).\n\nI'd certainly be happy to see progress in this direction, so that we can\nfinally have papers on accuracy in R :-)\n\nSo pls go ahead.\n\nBest\n-k",
+      "body_snippet": ">>>>> Martin Maechler writes:\n\n> You probably have followed at least peripherally Jim Garret's\n> initiative (on R-help) to form a group of R users interested in \n> \"validation\" of R in the sense of \"S",
+      "thread_id": "thread-dcda55d75934",
+      "thread_depth": 1,
+      "month": "2003-05"
+    },
+    {
+      "id": "msg-9ec94c1fe56d",
+      "message_id": "<OF901EF516.97589B2F-ON85256D26.005A1887@bd.com>",
+      "from_name": "Jim_Garrett at bd.com",
+      "from_email_hash": "bdc12ae94b91453202e581fe0d3d15d624c0f2085ea4ea3edf400db01e92418d",
+      "date": "2003-05-14T16:37:39Z",
+      "subject": "[R-sig-QA] wiki update, and documenting R development processes",
+      "subject_clean": "wiki update, and documenting R development processes",
+      "in_reply_to": null,
+      "references": [],
+      "body_plain": "Wiki update:  Warner Engl has added some regulatory guidelines in the\n\"FDARegulations\" area (which is now not FDA-specific!).  I've just entered\na lengthy review of the British guidance he contributed.  Please feel free\nto edit my review with your own comments; the wiki is at\n\nhttp://software.biostat.washington.edu/wikis/rvalid/FrontPage\n\nI've only read closely this one document, but it's already evident that\nwritten procedures are going to be very important.  Corporations using R\nwill be looking for a formal \"quality system\" including a document control\nsystem, and documents specifying the development process (Standard\nOperating Procedures).  I know that the R team *has* some standard\nprocedures.  Are there documents specifying these procedures?\n\nI would like to invite anyone who knows, especially members of the\ndevelopment team, to find any such documents that may exist, and if\ndocuments describing standard processes don't exist, could someone please\ncontribute descriptions of these processes?\n\nThanks!\n\n-Jim\n\n**********************************************************************\nThis message is intended only for the designated recipient(s).  ... {{dropped}}",
+      "body_snippet": "Wiki update:  Warner Engl has added some regulatory guidelines in the\n\"FDARegulations\" area (which is now not FDA-specific!).  I've just entered\na lengthy review of the British guidance he contributed",
+      "thread_id": "thread-9ec94c1fe56d",
+      "thread_depth": 0,
+      "month": "2003-05"
+    },
+    {
+      "id": "msg-b5189cb4329e",
+      "message_id": "<16067.53190.652860.687914@mithrandir.hornik.net>",
+      "from_name": "Kurt Hornik",
+      "from_email_hash": "c259ef400cb20a19b00d24612508e4d9cef4c260cf545ea89764819aaa0fcbd4",
+      "date": "2003-05-15T17:35:02Z",
+      "subject": "[R-sig-QA] wiki update, and documenting R development processes",
+      "subject_clean": "wiki update, and documenting R development processes",
+      "in_reply_to": "<OF901EF516.97589B2F-ON85256D26.005A1887@bd.com>",
+      "references": [
+        "<OF901EF516.97589B2F-ON85256D26.005A1887@bd.com>"
+      ],
+      "body_plain": ">>>>> Jim Garrett writes:\n\n> Wiki update:  Warner Engl has added some regulatory guidelines in the\n> \"FDARegulations\" area (which is now not FDA-specific!).  I've just entered\n> a lengthy review of the British guidance he contributed.  Please feel free\n> to edit my review with your own comments; the wiki is at\n\n> http://software.biostat.washington.edu/wikis/rvalid/FrontPage\n\n> I've only read closely this one document, but it's already evident\n> that written procedures are going to be very important.  Corporations\n> using R will be looking for a formal \"quality system\" including a\n> document control system, and documents specifying the development\n> process (Standard Operating Procedures).  I know that the R team *has*\n> some standard procedures.  Are there documents specifying these\n> procedures?\n\nNot yet ...\n\nI will eventually need to write a paper on the current QC tools which\nshould also shed some light on exisiting QA processes.  In a nutshell, R\nCore members are asked to commit code changes only provided that these\npassed make check-devel [or make check-all] on their local system.  Of\ncourse, this does not mean a lot if one does not know which tests these\ncheck suites contain.\n\nOne also needs to be careful about what it meant by 'R'.  You may find\nsome of my comments on the current two-tier development model in\n\n@InProceedings{hornik:Hornik:2002,\n  author       = {Kurt Hornik},\n  title        = {Tools and Strategies for Managing Software Library\n                  Repositories},\n  booktitle    = {Statistics in an Era of Technological Change,\n                  Proceedings of the 2002 Joint Statistical Meetings},\n  pages        = {1490--1493},\n  year         = 2002,\n}\n\nof interest.\n\nThis, in a rather narrative way, describes the standard processes on the\nCRAN main repository side of R.\n\n> I would like to invite anyone who knows, especially members of the\n> development team, to find any such documents that may exist, and if\n> documents describing standard processes don't exist, could someone\n> please contribute descriptions of these processes?\n\nbest\n-k",
+      "body_snippet": ">>>>> Jim Garrett writes:\n\n> Wiki update:  Warner Engl has added some regulatory guidelines in the\n> \"FDARegulations\" area (which is now not FDA-specific!).  I've just entered\n> a lengthy review of th",
+      "thread_id": "thread-9ec94c1fe56d",
+      "thread_depth": 1,
+      "month": "2003-05"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread-dcda55d75934",
+      "subject": "R \"Validation\" on the R-SIG-QA mailing list?",
+      "message_count": 2,
+      "participants": [
+        "Kurt Hornik",
+        "Martin Maechler"
+      ],
+      "started": "2003-05-06T07:12:06Z",
+      "last_reply": "2003-05-07T05:55:10Z",
+      "root_message_id": "msg-dcda55d75934"
+    },
+    {
+      "id": "thread-9ec94c1fe56d",
+      "subject": "wiki update, and documenting R development processes",
+      "message_count": 2,
+      "participants": [
+        "Jim_Garrett at bd.com",
+        "Kurt Hornik"
+      ],
+      "started": "2003-05-14T16:37:39Z",
+      "last_reply": "2003-05-15T17:35:02Z",
+      "root_message_id": "msg-9ec94c1fe56d"
+    }
+  ]
+}

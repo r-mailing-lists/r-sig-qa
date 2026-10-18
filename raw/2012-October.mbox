@@ -1,0 +1,28 @@
+From u-naumann at web.de  Thu Oct 18 16:07:16 2012
+From: u-naumann at web.de (Ulrike)
+Date: Thu, 18 Oct 2012 15:07:16 +0100
+Subject: [R-sig-QA] package reviews
+In-Reply-To: <mailman.0.1350567670.19858.r-sig-qa@r-project.org>
+References: <mailman.0.1350567670.19858.r-sig-qa@r-project.org>
+Message-ID: <50800D14.3080602@web.de>
+
+Hi,
+
+I've just signed up to this list, but found it's not very active.
+I signed up with one idea in mind, which might or might not be 
+realistic, but I would be interested to hear what people think about it.
+You certainly all know that at websites like Amazon etc, people who 
+bought certain products or bought a book can write a review about it. 
+Since there are so many user-written functions and packages in R, maybe 
+it would be good to have a similar feedback forum. So, the idea is to 
+have some forum/page of some form, where users who have used a certain 
+new package, could write a short review about it. This would be not just 
+be useful for reporting bugs, but more general, whether there are any 
+things, that the user expected, which are missing in the package. Or 
+general comments what is good or not so good about this package.
+What do people think about this?
+
+Best wishes,
+Ulrike
+
+
