@@ -13,11 +13,14 @@
       "subject_clean": "Validation of PLS regression",
       "in_reply_to": null,
       "references": [],
-      "body_plain": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/r-sig-qa/attachments/20120223/4cc1ab34/attachment.pl>",
-      "body_snippet": "An embedded and charset-unspecified text was scrubbed...\nName: not available\nURL: <https://stat.ethz.ch/pipermail/r-sig-qa/attachments/20120223/4cc1ab34/attachment.pl>",
+      "body_plain": "Greetings R users,\n\nI have been working on running plsda and I would like to have the R2 and Q2\nvalues.  I know the function R2 from the 'pls' package will generate both\nR2 and Q2 but they are for each separate class.  Is there a way to get the\ncumulative R2 and Q2 for the whole model?  I have also seen cumulative R2Y\nwith other software like SIMCAP.\n\nR2(pls.new, estimate=\"all\")\n\nResponse: B\n       (Intercept)    1 comps  2 comps\ntrain      0.00000   0.001759   0.3812\nCV        -0.03419  -0.082686   0.2983\n\nResponse: FR8\n       (Intercept)  1 comps  2 comps\ntrain      0.00000   0.4362   0.4362\nCV        -0.03419   0.3936   0.3745\n\nResponse: S45\n       (Intercept)  1 comps  2 comps\ntrain      0.00000   0.3682   0.7749\nCV        -0.03419   0.3061   0.7313\n\nAgain, what I am looking for is a way to get an overall R2 and Q2 values\nfor the entire model.  My thanks to any who can assist me,\n\nCharles\n\n\t[[alternative HTML version deleted]]",
+      "body_snippet": "Greetings R users,\n\nI have been working on running plsda and I would like to have the R2 and Q2\nvalues.  I know the function R2 from the 'pls' package will generate both\nR2 and Q2 but they are for eac",
       "thread_id": "thread-e74a339eb3f9",
       "thread_depth": 0,
-      "month": "2012-02"
+      "month": "2012-02",
+      "restored_from": [
+        "https://stat.ethz.ch/pipermail/r-sig-qa/attachments/20120223/4cc1ab34/attachment.pl"
+      ]
     }
   ],
   "threads": [
